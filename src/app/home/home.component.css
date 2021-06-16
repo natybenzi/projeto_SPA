@@ -1,0 +1,49 @@
+.botao {
+  background-color: #008CBA;
+  font-size: 12px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.botao:hover {
+  background-color: white;
+  color: #008CBA;
+  transition-duration: 0.4s;
+  border: 1px solid #008CBA;
+}
+
+.botao-btn {
+  background-color: white;
+  font: 12px;
+  color: #008CBA;
+}
+
+.botao-btn:hover {
+  background-color: #008CBA;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #008CBA;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #a6b2b6;
+}

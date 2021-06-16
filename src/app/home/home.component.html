@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA com Angular</title>
+</head>
+
+<body>
+
+  <button class="botao" mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button class="botao-btn" mat-menu-item>Alunos</button>
+    <button class="botao-btn" mat-menu-item>Professores</button>
+  </mat-menu>
+
+  <div>
+
+    <spa-alunos [valorInicial]="valor"></spa-alunos>
+
+    <button class="botao" (click)="mudarValor()">Mudar Valor</button>
+    <button class="botao" (click)="reiniciarValor()">Reiniciar Valor</button>
+    <button class="botao" (click)="exibirTabela()">Exibir Tabela</button>
+
+  </div>
+
+  <table *ngIf="exibeTabela">
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>E-mail</th>
+      <th>Curso</th>
+    </tr>
+    <tr *ngFor="let aluno of listaAlunos">
+      <td>{{aluno.nome}}</td>
+      <td>{{aluno.idade}}</td>
+      <td>{{aluno.email}}</td>
+      <td>{{aluno.curso}}</td>
+    </tr>
+  </table>
+
+  <div>
+    <spa-professores></spa-professores>
+
+    <button class="botao" (click)="exibirTabela1()">Exibir Tabela</button>
+  </div>
+
+  <table *ngIf="exibeTabela1">
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>E-mail</th>
+      <th>Curso</th>
+    </tr>
+    <tr *ngFor="let professor of listaProfessores">
+      <td>{{professor.nome}}</td>
+      <td>{{professor.idade}}</td>
+      <td>{{professor.email}}</td>
+      <td>{{professor.curso}}</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
